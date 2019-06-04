@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    
+   
+</head> 
+<style>
+    body {
+  font: 13px verdana;
+  font-weight: normal;
+}
+
+ .input {
+    margin: 10px;
+    top: 200%;
+left: 10%;
+position: relative;
+ }
+
+ #btSubmit {
+    top: 300%;
+left: 10%;
+position: relative;
+ }
+</style>
+<body> 
+
+<div  data-role="page">
+    <div class="conteiner">
+        	<div class="col-2" data-role="header">
+		<h1>My Title</h1>
+	</div><!-- /header -->
+        <br>
+        <br>   
+            
+        <div class="col-8" data-role="fieldcontain">
+             <h3> Producto :
+             <input type="search" name="password" id="search" value="" />
+            </h3> 
+
+            <br>
+            <br>        
+            <a href="#" data-role="button" data-icon="star" data-theme="a">Buscar</a>
+       
+            <div id="main">
+                    <input type="button" id="btAdd" value="Añadir Elemento" class="bt" /> <br>
+                  
+            </div>       
+                 
+        
+        </div>
+
+    <div class="col-2" ></div>
+    </div>
+
+
+</div><!-- /page -->
+
+
+
+</body>
+
+<script>
+  
+ $(document).ready(function() {
+        var iCnt = 0;
+
+// Crear un elemento div añadiendo estilos CSS
+        var container = $(document.createElement('div')).css({
+           
+            
+        });
+
+        $('#btAdd').click(function() {
+            if (iCnt <= 19) {
+
+                iCnt = iCnt + 1;
+
+                // Añadir caja de texto.
+                $(container).append('<input type=text class="input" id=tb' + iCnt + ' ' +
+                            'value="Producto ' + iCnt + '" /> <input type=text class="input" id=tb' + iCnt + ' ' +
+                            'value="Precio ' + iCnt + '" /><br> <br> ');
+
+
+                if (iCnt == 1) {   
+
+ var divSubmit = $(document.createElement('div'));
+                    $(divSubmit).append('<input type=button class="bt" onclick="GetTextValue()"' + 
+                            'id=btSubmit value=Enviar />');
+
+                }
+
+ $('#main').after(container, divSubmit); 
+            }
+            else {      //se establece un limite para añadir elementos, 20 es el limite
+                
+                $(container).append('<label>Limite Alcanzado</label>'); 
+                $('#btAdd').attr('class', 'bt-disable'); 
+                $('#btAdd').attr('disabled', 'disabled');
+
+            }
+        });
+
+       
+
+      
+    });
+
+    // Obtiene los valores de los textbox al dar click en el boton "Enviar"
+    var divValue, values = '';
+
+    function GetTextValue() {
+
+        $(divValue).empty(); 
+        $(divValue).remove(); values = '';
+
+        $('.input').each(function() {
+            divValue = $(document.createElement('div')).css({
+                padding:'15px', width:'300px'
+            });
+            values += this.value + '<br />'
+        });
+
+        $(divValue).append('<p><b>Tus valores añadidos</b></p>' + values);
+        $('body').append(divValue);
+
+    }
+</script>
+</html>
