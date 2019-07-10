@@ -1,134 +1,117 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>My Page</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
-    
-   
-</head> 
-<style>
-    body {
-  font: 13px verdana;
-  font-weight: normal;
-}
+<!DOCTYPE html>
+<html>
 
- .input {
-    margin: 10px;
-    top: 200%;
-left: 10%;
-position: relative;
- }
+<head>
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="./index.css"></script>
+  <script src="./personal.html"></script>
+</head>
 
- #btSubmit {
-    top: 300%;
-left: 10%;
-position: relative;
- }
-</style>
-<body> 
+<container id="habilidades">
 
-<div  data-role="page">
-    <div class="conteiner">
-        	<div class="col-2" data-role="header">
-		<h1>My Title</h1>
-	</div><!-- /header -->
-        <br>
-        <br>   
-            
-        <div class="col-8" data-role="fieldcontain">
-             <h3> Producto :
-             <input type="search" name="password" id="search" value="" />
-            </h3> 
+  <body>
+    <!--pagina 1-->
+    <div data-role="page" id="page1">
+      <div data-role="header">
+        <h2>HABILIDADES</h2>
+      </div>
+      <!--listas-->
+      <ul data-role=" listview">
+        <li data-role="collapsible" data-inset="false">
+          <h2>Conocimientos</h2>
+          <ul data-role="listview" data-theme="b">
+            <li><a href="#">Angular</a></li>
+            <li><a href="#">Ionic</a></li>
+            <li><a href="#">Lumen</a></li>
+          </ul>
+        </li>
 
-            <br>
-            <br>        
-            <a href="#" data-role="button" data-icon="star" data-theme="a">Buscar</a>
-       
-            <div id="main">
-                    <input type="button" id="btAdd" value="Añadir Elemento" class="bt" /> <br>
-                  
-            </div>       
-                 
-        
+        <li data-role="collapsible" data-inset="false">
+          <h2>Habilidades</h2>
+          <ul data-role="listview" data-theme="b">
+            <li><a href="#">Flexibilidad/adaptabilidad</a></li>
+            <li><a href="#">Creatividad</a></li>
+            <li><a href="#">Trabajo en equipo</a></li>
+          </ul>
+        </li>
+
+        <li data-role="collapsible" data-inset="false">
+          <h2>Hobbies</h2>
+          <ul data-role="listview" data-theme="b">
+            <li><a href="#">Pescar</a></li>
+            <li><a href="#">Golf</a></li>
+            <li><a href="#">Lectura</a></li>
+          </ul>
+        </li>
+
+        <li data-role="collapsible" data-inset="false">
+          <h2>Proyectos</h2>
+          <ul data-role="listview" data-theme="b">
+            <li><a href="#">MiSoX</a></li>
+            <li><a href="#">IsoCrea</a></li>
+            <li><a href="#">ChreaSoft</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!--listas-->
+
+      <!--footer-->
+      <div data-role="footer" data-theme="b">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#page1" id="chat" data-icon="custom">Habilidades</a></li>
+            <li><a href="#page2" id="email" data-icon="custom">Informacion General</a></li>
+          </ul>
         </div>
+      </div>
+      <!--footer-->
 
-    <div class="col-2" ></div>
     </div>
+    <!--pagina 1-->
+
+    <!--pagina 2-->
+    <div data-role="page" id="page2">
+      <div data-role="header">
+        <h2>INFORMACION PERSONAL</h2>
+      </div>
+
+      <!--datos personales-->
+      <div class="ui-content ui-page-theme-a" data-form="ui-page-theme-a" data-theme="a" role="main">
+        <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+          <li data-role="list-divider" data-theme="a" data-swatch="a" data-form="ui-bar-a" role="heading"
+            class="ui-li-divider ui-bar-a ui-first-child">
+            <h2>Datos Personales</h2>
+          </li>
+          <li data-form="ui-body-a" data-swatch="a" data-theme="a" class="ui-li-static ui-body-a">
+            <h5>Nombre:</h5>
+            <p>Daniela Tobar </p>
+            <h5>Profesion:</h5>
+            <p>Estudiante</p>
+            <h5>Edad:</h5>
+            <p>21 Años</p>
+          </li>
+        </ul>
+      </div>
+      <!--datos personales-->
+
+      <!--footer-->
+      <div data-role="footer" data-theme="b">
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#page1" id="chat" data-icon="custom">Habilidades</a></li>
+            <li><a href="#page2" id="email" data-icon="custom">Informacion General</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--footer-->
+    </div>
+    <!--pagina 2-->
 
 
-</div><!-- /page -->
+  </body>
+</container>
 
-
-
-</body>
-
-<script>
-  
- $(document).ready(function() {
-        var iCnt = 0;
-
-// Crear un elemento div añadiendo estilos CSS
-        var container = $(document.createElement('div')).css({
-           
-            
-        });
-
-        $('#btAdd').click(function() {
-            if (iCnt <= 19) {
-
-                iCnt = iCnt + 1;
-
-                // Añadir caja de texto.
-                $(container).append('<input type=text class="input" id=tb' + iCnt + ' ' +
-                            'value="Producto ' + iCnt + '" /> <input type=text class="input" id=tb' + iCnt + ' ' +
-                            'value="Precio ' + iCnt + '" /><br> <br> ');
-
-
-                if (iCnt == 1) {   
-
- var divSubmit = $(document.createElement('div'));
-                    $(divSubmit).append('<input type=button class="bt" onclick="GetTextValue()"' + 
-                            'id=btSubmit value=Enviar />');
-
-                }
-
- $('#main').after(container, divSubmit); 
-            }
-            else {      //se establece un limite para añadir elementos, 20 es el limite
-                
-                $(container).append('<label>Limite Alcanzado</label>'); 
-                $('#btAdd').attr('class', 'bt-disable'); 
-                $('#btAdd').attr('disabled', 'disabled');
-
-            }
-        });
-
-       
-
-      
-    });
-
-    // Obtiene los valores de los textbox al dar click en el boton "Enviar"
-    var divValue, values = '';
-
-    function GetTextValue() {
-
-        $(divValue).empty(); 
-        $(divValue).remove(); values = '';
-
-        $('.input').each(function() {
-            divValue = $(document.createElement('div')).css({
-                padding:'15px', width:'300px'
-            });
-            values += this.value + '<br />'
-        });
-
-        $(divValue).append('<p><b>Tus valores añadidos</b></p>' + values);
-        $('body').append(divValue);
-
-    }
-</script>
 </html>
