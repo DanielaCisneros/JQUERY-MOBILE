@@ -8,9 +8,16 @@
 }
 */
 
-/*footer*/
+/*body*/
 #movil{
     max-width: 799px;
     min-width: 300px;
     height:auto;
+}
+
+/*footer*/
+.footer{
+    position:absolute; 
+    bottom:1px; width:100%;  
+    text-align:right;
 }
